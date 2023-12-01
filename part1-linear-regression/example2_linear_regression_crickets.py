@@ -10,6 +10,7 @@ y = data["Chirps"].values
 
 # use reshape to turn the x values into a 2D array
 x = x.reshape(-1, 1)
+print(x)
 
 # create the model
 model = LinearRegression().fit(x, y)
@@ -36,12 +37,13 @@ The following code creates the graph to visualize the data
 # sets the size of the graph
 plt.figure(figsize=(6,4))
 
+
 # creates a scatter plot of originial data in purple
 # and the predicted data in blue
 plt.scatter(x,y, c="purple")
 plt.scatter(x_predict, prediction, c="blue")
 
-# labe the axes
+# label the axes
 plt.xlabel("Temperature °F")
 plt.ylabel("Chirps per Minute")
 plt.title("Cricket Chirps by Temperature")

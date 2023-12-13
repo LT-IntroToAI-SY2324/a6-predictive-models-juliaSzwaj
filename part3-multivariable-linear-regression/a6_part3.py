@@ -29,15 +29,19 @@ print("Testing Results")
 
 predict = model.predict(xtest)
 predict = np.around(predict, 2)
-print(predict)
+#print(predict)
 
 print("\nTesting Multivariable Model with Testing Data: ")
 for index in range(len(xtest)):
     actual = ytest[index]
     predicted_y = predict[index]
     x_coord = xtest[index]
+    x_coord = x_coord
     print(f"Miles: {x_coord[0]} Age: {x_coord[1]} Actual: {actual} Predicted: {predicted_y}")
 
+my_cars = [[89, 10], [150, 20]]
+my_predictions = model.predict(my_cars)
+print(my_predictions)
 
 #print("***************")
 #print("Testing Results")

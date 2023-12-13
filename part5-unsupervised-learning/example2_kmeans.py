@@ -6,7 +6,7 @@ from sklearn.datasets import make_moons
 from sklearn.datasets import make_circles
 
 #uses the sklearn function to make a dataset 
-# x,y = make_moons()
+#x,y = make_moons()
 x, y = make_circles()
 
 #sets the value of k and creates kmeans model

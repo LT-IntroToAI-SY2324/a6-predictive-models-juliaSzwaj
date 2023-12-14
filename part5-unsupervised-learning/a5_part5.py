@@ -8,13 +8,13 @@ data = pd.read_csv("part5-unsupervised-learning/customer_data.csv")
 x = data[["Annual Income", "Spending Score"]]
 
 #standardize the data
-x_std = StandardScaler().fit_transform(data)
+x_std = StandardScaler().fit_transform(x)
 
 #the value of k has been defined for you
 k = 5
 
 #apply the kmeans algorithm
-km = KMeans(n_clusters = k).fix(x)
+km = KMeans(n_clusters = k, n_init = 10).fit(x_std)
 
 #get the centroid and label values
 centroids = km.cluster_centers_
